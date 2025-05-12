@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de Pontuação</title>
+  <link rel="stylesheet" href="css/Texto.css">
+  <link rel="stylesheet" href="css/exemplo.css">
+</head>
+<body>
+<p><a href="javascript:history.back()">Voltar</a></p>
+  <div class="titulo">Ranking Interno SJBV</div>
+  <div class="subtitulo">1ª Etapa - 29 de Março</div>
+
+  <!-- Filtro por Categoria -->
+  <div class="filters">
+    <select id="categoryFilter" onchange="filterTable()">
+      <option value="">Todas as Categorias</option>
+      <option value="A">Nível A</option>
+      <option value="B">Nível B</option>
+      <option value="C">Nível C</option>
+    </select>
+  </div>
+
+  <table id="rankingTable">
+    <thead>
+      <tr>
+        <th>Clas</th>
+        <th>Nome</th>
+        <th>Niv.</th>
+        <th>Pts Cat.</th>
+        <th>Pts Geral</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>01º</td><td>Raphael Buzon</td><td>A</td><td>13</td><td>39</td></tr>
+      <tr><td>02º</td><td>Luiz H. Aguiar</td><td>B</td><td>18</td><td>36</td></tr>
+      <tr><td>03º</td><td>Manuela Miranda</td><td>B</td><td>15</td><td>30</td></tr>
+      <tr><td>04º</td><td>João Bonome</td><td>A</td><td>10</td><td>30</td></tr>
+      <tr><td>05º</td><td>Sofia Lança</td><td>B</td><td>12</td><td>24</td></tr>
+      <tr><td>06º</td><td>Léo Tomasseti</td><td>A</td><td>7</td><td>21</td></tr>
+      <tr><td>07º</td><td>Nikollas Penha</td><td>B</td><td>10</td><td>20</td></tr>
+      <tr><td>08º</td><td>Santiago Magalhães</td><td>B</td><td>8</td><td>16</td></tr>
+      <tr><td>09º</td><td>João Mançano</td><td>A</td><td>5</td><td>15</td></tr>
+      <tr><td>10º</td><td>Beatriz Poiano</td><td>B</td><td>7</td><td>14</td></tr>
+      <tr><td>11º</td><td>Bruno Mariano</td><td>C</td><td>12</td><td>12</td></tr>
+      <tr><td>12º</td><td>Jhonatan Dos Santos</td><td>B</td><td>6</td><td>12</td></tr>
+      <tr><td>13º</td><td>Regina</td><td>B</td><td>5</td><td>10</td></tr>
+      <tr><td>14º</td><td>Benicio Purchio</td><td>C</td><td>9</td><td>9</td></tr>
+      <tr><td>15º</td><td>Lucas Dominato</td><td>A</td><td>3</td><td>9</td></tr>
+      <tr><td>16º</td><td>Júlia Braz</td><td>B</td><td>4</td><td>8</td></tr>
+      <tr><td>17º</td><td>Gabriel Caetano</td><td>C</td><td>6</td><td>6</td></tr>
+      <tr><td>18º</td><td>Vinicius Jordão</td><td>A</td><td>2</td><td>6</td></tr>
+      <tr><td>19º</td><td>Nathan Lopes</td><td>B</td><td>3</td><td>6</td></tr>
+      <tr><td>20º</td><td>Arthur Galli</td><td>C</td><td>4</td><td>4</td></tr>
+      <tr><td>21º</td><td>Vinicius Gaspar</td><td>B</td><td>2</td><td>4</td></tr>
+      <tr><td>22º</td><td>Bianca Schiavo</td><td>A</td><td>1</td><td>3</td></tr>
+      <tr><td>23º</td><td>Rafael Caetano</td><td>C</td><td>2</td><td>2</td></tr>
+      <tr><td>24º</td><td>Luan Nunes</td><td>B</td><td>1</td><td>2</td></tr>
+      <tr><td>25º</td><td>Cauã Ruatio</td><td>C</td><td>1</td><td>1</td></tr>
+
+    </tbody>
+  </table>
+
+  <script>
+    // Função para filtrar a tabela por categoria
+    function filterTable() {
+      let categoryFilter = document.getElementById("categoryFilter").value;
+      let table = document.getElementById("rankingTable");
+      let rows = Array.from(table.rows).slice(1); // Obtém as linhas da tabela (sem o cabeçalho)
+
+      // Filtra por categoria
+      rows.forEach(row => {
+        let category = row.cells[2].innerText;
+        if (categoryFilter && category !== categoryFilter) {
+          row.classList.add("hidden"); // Oculta a linha
+        } else {
+          row.classList.remove("hidden"); // Exibe a linha
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

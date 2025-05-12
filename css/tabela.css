@@ -1,0 +1,114 @@
+/* Estilo para o corpo da página */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Container para as tabelas lado a lado */
+.table-container {
+  display: flex;
+  justify-content: space-evenly; /* Alinha as tabelas lado a lado */
+  gap: 15px; /* Reduz o espaço entre as tabelas */
+  flex-wrap: wrap; /* Permite que as tabelas se ajustem em telas menores */
+  margin-top: 20px; /* Menor margem superior */
+}
+
+/* Estilo comum para as tabelas */
+table {
+  width: 100%;
+  max-width: 450px; /* Tamanho máximo para garantir que caiba bem na tela */
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0; /* Remove qualquer margem extra */
+}
+
+th, td {
+  padding: 10px 15px; /* Reduz o padding */
+  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+th {
+  background-color: #3498db; /* Cor de fundo para o cabeçalho */
+  color: white;
+  text-transform: uppercase;
+}
+
+td[colspan="2"] {
+  text-align: center;
+  background-color: #f9fafb;
+}
+
+/* Zebra stripes nas linhas */
+tr:nth-child(odd) {
+  background-color: #f9fbfd;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+/* Efeito de hover nas linhas */
+tr:hover {
+  background-color: #ecf6fc;
+}
+
+/* Estilo para links */
+a {
+  text-decoration: none;
+  color: #3498db;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #2980b9;
+}
+
+/* Estilo do título principal */
+h1 {
+  color: #2c3e50;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para o título da tabela da esquerda */
+h2 {
+  color: #34495e;
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 15px; /* Ajustado o espaçamento abaixo do título */
+  text-align: left; /* Alinha o título à esquerda */
+  margin-left: 0; /* Remove qualquer margem adicional à esquerda */
+}
+
+/* Estilo para o botão de Voltar */
+p a {
+  text-decoration: none;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+p a:hover {
+  background-color: #2980b9;
+}
+
+/* Estilo para o container da tabela e título */
+.table-title-container {
+  display: flex;
+  align-items: flex-start; /* Alinha o título e a tabela no início */
+  justify-content: flex-start; /* Faz com que o título e a tabela fiquem alinhados à esquerda */
+  gap: 10px; /* Espaço entre o título e a tabela */
+}
