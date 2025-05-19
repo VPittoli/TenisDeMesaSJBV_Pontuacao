@@ -1,0 +1,30 @@
+/* Centralizar uma tabela no centro da tela */
+.centralizada {
+  display: flex;
+  justify-content: center;   /* Centraliza horizontalmente */
+  align-items: center;       /* Centraliza verticalmente */
+}
+
+/* Estilo para o corpo da página */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+table {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+
+
+
+
+

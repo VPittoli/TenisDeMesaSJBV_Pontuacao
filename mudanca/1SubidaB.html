@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Critérios de Subida</title>
+  <link rel="stylesheet" href="../css/Texto.css" />
+  <link rel="stylesheet" href="../css/tabela2.css" />
+  <link rel="stylesheet" href="../css/voltar.css" />
+  <style>
+    /* Centraliza a tabela no meio da tela */
+    .centralizada {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 900px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      text-align: center;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    thead th {
+      color: black;
+      font-size: 20px;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #f9fbfd;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #ffffff;
+    }
+
+    td:first-child {
+      font-weight: bold;
+    }
+
+    td:nth-child(2) {
+      font-weight: bold;
+    }
+
+    p {
+      max-width: 800px;
+      margin: 8px auto;
+      text-align: left;
+      font-size: 16px;
+    }
+
+    h2 {
+      color: #2c3e50;
+      font-size: 22px;
+      margin-top: 40px;
+    }
+
+    /* Tooltip CSS */
+.tooltip {
+  position: relative; /* para ser referência do tooltiptext */
+  cursor: help;
+  border-bottom: 1px dotted #000;
+  z-index: 10; /* acima do conteúdo da célula */
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 320px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1000; /* alto para ficar sobre a tabela */
+  top: 125%; /* logo abaixo do texto */
+  left: 50%;
+  transform: translateX(-50%); /* centraliza horizontalmente */
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+  </style>
+</head>
+<body>
+
+  <p><a href="javascript:history.back()">Voltar</a></p>
+
+  <div class="centralizada">
+    <table>
+      <thead>
+        <tr>
+          <th colspan="7">Critérios de Subida</th>
+        </tr>
+        <tr>
+          <th>Clas</th>
+          <th>Nome</th>
+          <th>Pontos</th>
+          <th>
+            <span class="tooltip">Crit 1
+              <span class="tooltiptext">Número de vezes que o jogador ficou em 1º lugar na categoria.</span>
+            </span>
+          </th>
+          <th>
+            <span class="tooltip">Crit 2
+              <span class="tooltiptext">Número de vezes que o jogador ficou em 2º lugar na categoria.</span>
+            </span>
+          </th>
+          <th>
+            <span class="tooltip">Crit 3
+              <span class="tooltiptext">Número de vezes que o jogador ficou em 3º lugar na categoria.</span>
+            </span>
+          </th>
+          <th>
+            <span class="tooltip">Crit 4
+              <span class="tooltiptext">CD</span>
+            </span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1º</td>
+          <td style="background-color:lightgreen">Luiz H. Aguiar</td>
+          <td>66</td>
+          <td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>2º</td>
+          <td style="background-color:lightgreen">Manuela Miranda</td>
+          <td>50</td>
+          <td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>3º</td>
+          <td style="background-color:lightgreen">Julio Caldas</td>
+          <td>36</td>
+          <td>1</td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>3º</td>
+          <td style="background-color:lightgreen">Sofia Lança</td>
+          <td>36</td>
+          <td></td><td></td><td>1</td><td>1</td>
+        </tr>
+        <tr>
+          <td>3º</td>
+          <td>Jhonatan Dos Santos</td>
+          <td>36</td>
+          <td></td><td></td><td>1</td><td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Portanto, passarão para o Nível A:</h2>
+
+  <p><strong>Luiz H. Aguiar:</strong> garantiu sua vaga por ter sido o 1º colocado em pontos no nível B.</p>
+
+  <p><strong>Manuela Miranda:</strong> também sobe, por ocupar o 2º lugar em pontos no nível B.</p>
+
+  <p><strong>Julio Caldas:</strong> avança devido ao Critério 1, entre os três empatados com 36 pontos, ele foi o único que conquistou um 1º lugar na categoria B.</p>
+
+  <p><strong>Sofia Lança:</strong> fica com a última vaga de subida. Embora ela e Jhonatan tenham empatado em pontos e ambos tenham um 3º lugar na categoria B, 
+    Sofia venceu Jhonatan por 3x2 durante o mata-mata da Etapa 1, garantindo sua classificação.</p>
+
+</body>
+</html>

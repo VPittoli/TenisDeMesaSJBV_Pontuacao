@@ -3,87 +3,140 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sobre</title>
+  <title>Informações</title>
   <link rel="stylesheet" href="css/Texto.css" />
   <link rel="stylesheet" href="css/tabela.css" />
+  <link rel="stylesheet" href="css/voltar.css" />
+  <style>
+    .tabela-flex {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .tabela-box {
+      flex: 1 1 300px;
+      max-width: 400px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #333;
+      color: white;
+    }
+
+    .info-row {
+      background-color: #f9f9f9;
+    }
+  </style>
 </head>
 <body>
-    <p><a href="javascript:history.back()">Voltar</a></p>
+  <p><a href="javascript:history.back()">Voltar</a></p>
   <h1>Informações:</h1>
 
-  <div class="table-container">
-    <!-- Primeira Tabela -->
-<table border="1" cellspacing="0" cellpadding="5">
-  
-  <tbody>
-    <tr>
-      <th colspan="2"style="background-color: #333; color: white;">Critérios Adotados no Torneio</th>
-    </tr>
-    <tr>
-      <td colspan="2"><strong>1. Fase que caiu no Mata-Mata.</strong></td>
-    </tr>
-    <tr>
-      <td colspan="2"><strong>2. Número de SETs ganhos</strong></td>
-    </tr>
-    <tr>
-      <td colspan="2"><em>3.Confronto Direto <br>(Apenas entre 2 pessoas)</em></td>
-    </tr>
-    <tr>
-      <td colspan="2">4. Vitórias por 3x0</td>
-    </tr>
-    <tr>
-      <td colspan="2">5. Vitórias por 3x1</td>
-    </tr>
-    <tr>
-      <td colspan="2">6. Vitórias por 3x2</td>
-    </tr>
-    <tr>
-      <td colspan="2"><em>7. Desempate Manual (se necessário)</em></td>
-    </tr>
-    <tr>
-      <td colspan="2"><strong>Casos omissos serão definidos pela Arbitragem</strong></td>
-    </tr>
-  </tbody>
-</table>
+  <div class="tabela-flex">
+    <!-- Tabela 1 -->
+    <div class="tabela-box">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">Critérios Adotados no Torneio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="2"><strong>1. Fase que caiu no Mata-Mata.</strong></td></tr>
+          <tr><td colspan="2"><strong>2. Número de SETs ganhos</strong></td></tr>
+          <tr><td colspan="2"><em>3. Confronto Direto<br>(Apenas entre 2 pessoas)</em></td></tr>
+          <tr><td colspan="2">4. Vitórias por 3x0</td></tr>
+          <tr><td colspan="2">5. Vitórias por 3x1</td></tr>
+          <tr><td colspan="2">6. Vitórias por 3x2</td></tr>
+          <tr><td colspan="2"><em>7. Desempate Manual (se necessário)</em></td></tr>
+          <tr><td colspan="2"><strong>Casos omissos serão definidos pela Arbitragem</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
 
+    <!-- Tabela 2 -->
+    <div class="tabela-box">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">Pontuação: <a href="exemplo.html" style="color: white;">Exemplo</a></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="2">
+              Os jogadores que avançarem para o Mata-Mata receberão pontuação. 
+              Caso menos de 8 jogadores se classifiquem, os melhores colocados da Fase de Grupos que não avançarem também serão pontuados.
+            </td>
+          </tr>
+          <tr><td colspan="2"><strong>Distribuição dos pontos:</strong></td></tr>
+          <tr><td colspan="2">O último colocado receberá 1 ponto, e cada posição acima receberá 1 ponto a mais até o 5º colocado.</td></tr>
+          <tr><td colspan="2">O 4º colocado receberá 2 pontos a mais que o 5º.</td></tr>
+          <tr><td colspan="2">O 3º colocado receberá 2 pontos a mais que o 4º.</td></tr>
+          <tr><td colspan="2">O Vice-Campeão receberá 3 pontos a mais que o 3º.</td></tr>
+          <tr><td colspan="2">O Campeão receberá 3 pontos a mais que o Vice.</td></tr>
+          <tr><td colspan="2"><strong>Casos omissos serão definidos pela Arbitragem</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
 
-    <!-- Segunda Tabela -->
-    <table border="1" cellspacing="0" cellpadding="5">
-  <thead>
-    <tr>
-      <th colspan="2" style="background-color: #333; color: white;">
-        Pontuação: <a href="exemplo.html">Exemplo</a>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td colspan="2">
-        Os jogadores que avançarem para o Mata-Mata receberão pontuação. 
-        Caso menos de 8 jogadores se classifiquem, os melhores colocados da Fase de Grupos que não avançarem também serão pontuados.
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2"><strong>Distribuição dos pontos:</strong></td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        O último colocado receberá 1 ponto, e cada posição acima receberá 1 ponto a mais até o 5º colocado.
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">O 4º colocado receberá 2 pontos a mais que o 5º.</td>
-    </tr>
-    <tr>
-      <td colspan="2">O 3º colocado receberá 2 pontos a mais que o 4º.</td>
-    </tr>
-    <tr>
-      <td colspan="2">O Vice-Campeão receberá 3 pontos a mais que o 3º.</td>
-    </tr>
-    <tr>
-      <td colspan="2">O Campeão receberá 3 pontos a mais que o Vice.</td>
-    </tr>
-
+    <!-- Tabela 3 -->
+    <div class="tabela-box">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2"><strong>Critérios para Subida/Descida</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="2" class="info-row">A cada 2 etapas, jogadores podem subir ou descer de categoria, dependendo de seus resultados nas etapas anteriores.</td></tr>
+          <tr>
+            <td><strong>Subida</strong></td>
+            <td><strong>Descida</strong></td>
+          </tr>
+          <tr>
+            <td>Maior número de pontos</td>
+            <td>Menor número de pontos</td>
+          </tr>
+          <tr>
+            <td>Vezes que ficou em 1º lugar</td>
+            <td>Maior número de SETs ganhos</td>
+          </tr>
+          <tr>
+            <td>Vezes que ficou em 2º lugar</td>
+            <td><em>Confronto Direto<br>(Apenas entre 2 pessoas)</em></td>
+          </tr>
+          <tr>
+            <td>Vezes que ficou em 3º lugar</td>
+            <td>Menor número de partidas</td>
+          </tr>
+          <tr>
+            <td><em>Confronto Direto<br>(Apenas entre 2 pessoas)</em></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Maior número de SETs ganhos</td>
+            <td></td>
+          </tr>
+          <tr><td colspan="2"><strong>Casos omissos serão definidos pela Arbitragem</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </body>
 </html>
