@@ -21,12 +21,6 @@ body {
     border-radius: 10px;
 }
 
-.menu-logo {
-    max-width: 200px;  /* Ajuste o tamanho da imagem conforme necessário */
-    margin-bottom: 30px;  /* Espaçamento abaixo da imagem */
-}
-
-
 h1 {
     font-size: 32px;
     margin-bottom: 30px;
@@ -36,13 +30,16 @@ h1 {
 
 .menu-links {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 15px;
+    justify-content: center;
 }
 
-/* Estilo individual para cada link */
 .menu-item {
-    display: inline-block;
+    
+    flex: 0 1 auto;
+    min-width: calc(50% - 190px);
+    box-sizing: border-box;
     padding: 15px 30px;
     background-color: #fff;
     color: #2980b9;
@@ -64,4 +61,10 @@ h1 {
 .menu-item img {
     width: 20px;
     margin-right: 10px;
+}
+
+@media (max-width: 500px) {
+    .menu-item {
+        flex: 0 0 40%; /* ocupa a linha inteira em telas pequenas */
+    }
 }
